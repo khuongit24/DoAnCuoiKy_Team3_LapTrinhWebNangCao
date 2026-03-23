@@ -1,0 +1,85 @@
+├── backend/                        # Toàn bộ server Node.js + Express
+│   ├── config/
+│   │   └── db.js                   # Kết nối MongoDB
+│   │
+│   ├── controllers/                # Xử lý logic nghiệp vụ cho web
+│   │   ├── authController.js
+│   │   ├── productController.js
+│   │   ├── orderController.js
+│   │   └── userController.js
+│   │
+│   ├── middleware/                 # Hàm chạy xen giữa request và controller
+│   │   ├── authMiddleware.js       # Xác thực JWT
+│   │   ├── adminMiddleware.js      # Kiểm tra quyền admin
+│   │   └── errorMiddleware.js      # Bắt lỗi toàn cục
+│   │
+│   ├── models/                     # Schema MongoDB (cấu trúc dữ liệu)
+│   │   ├── User.js
+│   │   ├── Product.js
+│   │   └── Order.js
+│   │
+│   ├── routes/                     # Định nghĩa các endpoint API
+│   │   ├── authRoutes.js           # /api/auth
+│   │   ├── productRoutes.js        # /api/products
+│   │   ├── orderRoutes.js          # /api/orders
+│   │   └── userRoutes.js           # /api/users
+│   │
+│   ├── utils/                      # Hàm tiện ích dùng chung
+│   │   └── generateToken.js        # Tạo JWT token
+│   │
+│   ├── .env                        # Biến môi trường (KHÔNG commit lên git)
+│   ├── .env.example                # Mẫu biến môi trường (commit được)
+│   ├── package.json
+│   └── server.js                   # Điểm khởi động server
+│
+├── frontend/                       # Toàn bộ React app
+│   ├── public/
+│   │   └── index.html
+│   │
+│   └── src/
+│       ├── api/                    # Tập trung các hàm gọi API
+│       │   ├── authApi.js
+│       │   ├── productApi.js
+│       │   └── orderApi.js
+│       │
+│       ├── components/             # Toàn bộ thành phần UI đặt ở đây
+│       │   ├── common/
+│       │   │   ├── Header.jsx
+│       │   │   ├── Footer.jsx
+│       │   │   ├── Loader.jsx
+│       │   │   └── Message.jsx     # Ví dụ: Hiển thị thông báo lỗi / thành công
+│       │   ├── product/
+│       │   │   ├── ProductCard.jsx
+│       │   │   ├── ProductList.jsx
+│       │   │   └── Rating.jsx
+│       │   └── cart/
+│       │       └── CartItem.jsx
+│       │
+│       ├── context/                # React Context để quản lý trạng thái toàn cục của web
+│       │   ├── AuthContext.jsx     # Trạng thái đăng nhập
+│       │   └── CartContext.jsx     # Giỏ hàng
+│       │
+│       ├── pages/                  # Các trang (mỗi route là một page)
+│       │   ├── HomePage.jsx
+│       │   ├── ProductPage.jsx     # Chi tiết sản phẩm
+│       │   ├── CartPage.jsx
+│       │   ├── LoginPage.jsx
+│       │   ├── RegisterPage.jsx
+│       │   ├── OrderPage.jsx
+│       │   ├── ProfilePage.jsx
+│       │   └── admin/
+│       │       ├── AdminDashboard.jsx
+│       │       ├── ProductManage.jsx
+│       │       └── OrderManage.jsx
+│       │
+│       ├── hooks/                  # Custom React hooks
+│       │   └── useAuth.js
+│       │
+│       ├── utils/
+│       │   └── helpers.js          # chứa các hàm helper hỗ trợ, có thể gồm format giá tiền, ngày tháng...
+│       │
+│       ├── App.jsx                 # Cấu hình routes
+│       └── main.jsx                # Điểm khởi động React
+│
+├── .gitignore
+└── README.md
