@@ -654,7 +654,7 @@ const getFeaturedProducts = asyncHandler(async (req, res) => {
   })
     .sort({ createdAt: -1 })
     .limit(8)
-    .select('name slug category brand images price salePrice rating numReviews');
+    .select('name slug category brand images price salePrice rating numReviews countInStock');
 
   res.status(200).json({
     success: true,
