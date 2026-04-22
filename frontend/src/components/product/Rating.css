@@ -1,0 +1,29 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rating__stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating__star {
+  font-size: 0.9rem;
+}
+
+.rating__star--full,
+.rating__star--half {
+  color: var(--color-warning-500);
+}
+
+.rating__star--empty {
+  color: var(--color-neutral-300);
+}
+
+.rating__text {
+  color: var(--color-neutral-500);
+  font-size: var(--font-size-sm);
+}

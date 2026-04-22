@@ -1,0 +1,48 @@
+.order-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  border-radius: var(--radius-round);
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.order-status-badge--pending {
+  background: color-mix(in srgb, var(--color-warning-500) 14%, white);
+  color: #92400e;
+  border-color: color-mix(in srgb, var(--color-warning-500) 28%, white);
+}
+
+.order-status-badge--processing {
+  background: color-mix(in srgb, var(--color-primary-500) 14%, white);
+  color: #1d4ed8;
+  border-color: color-mix(in srgb, var(--color-primary-500) 28%, white);
+}
+
+.order-status-badge--shipped {
+  background: color-mix(in srgb, #7c3aed 14%, white);
+  color: #6d28d9;
+  border-color: color-mix(in srgb, #7c3aed 28%, white);
+}
+
+.order-status-badge--delivered {
+  background: color-mix(in srgb, var(--color-success-500) 14%, white);
+  color: #166534;
+  border-color: color-mix(in srgb, var(--color-success-500) 28%, white);
+}
+
+.order-status-badge--cancelled {
+  background: color-mix(in srgb, var(--color-error-500) 14%, white);
+  color: #b91c1c;
+  border-color: color-mix(in srgb, var(--color-error-500) 28%, white);
+}
+
+.order-status-badge--unknown {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-600);
+  border-color: var(--color-neutral-300);
+}

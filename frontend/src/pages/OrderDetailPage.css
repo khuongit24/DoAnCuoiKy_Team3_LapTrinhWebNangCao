@@ -1,0 +1,113 @@
+.order-detail-page {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.order-detail-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.order-detail-page__header h1 {
+  font-size: clamp(1.7rem, 2vw, 2.2rem);
+}
+
+.order-detail-page__header p {
+  margin-top: var(--space-1);
+  color: var(--color-neutral-600);
+}
+
+.order-detail-page__layout {
+  display: grid;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.order-detail-page__main {
+  padding: var(--space-4);
+}
+
+.order-detail-page__section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.order-detail-page__section h2 {
+  font-size: var(--font-size-lg);
+}
+
+.order-detail-page__sidebar {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.order-detail-page__card {
+  padding: var(--space-4);
+  display: grid;
+  gap: var(--space-2);
+}
+
+.order-detail-page__card h2 {
+  font-size: var(--font-size-md);
+}
+
+.order-detail-page__card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-700);
+}
+
+.order-detail-page__paid-text {
+  color: var(--color-success-500);
+}
+
+.order-detail-page__unpaid-text {
+  color: var(--color-warning-500);
+}
+
+.order-detail-page__card dl {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.order-detail-page__card dl div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.order-detail-page__card dt {
+  color: var(--color-neutral-600);
+}
+
+.order-detail-page__card dd {
+  font-weight: var(--font-weight-semibold);
+}
+
+.order-detail-page__total-row {
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-neutral-300);
+}
+
+.order-detail-page__total-row dd {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-600);
+}
+
+.order-detail-page__back-btn {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .order-detail-page__layout {
+    grid-template-columns: minmax(0, 1fr) 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .order-detail-page__header {
+    flex-direction: column;
+  }
+}

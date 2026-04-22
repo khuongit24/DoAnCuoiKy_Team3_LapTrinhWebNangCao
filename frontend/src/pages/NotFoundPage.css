@@ -1,0 +1,29 @@
+.not-found-page {
+  min-height: calc(100vh - 260px);
+  display: grid;
+  place-items: center;
+}
+
+.not-found-page__card {
+  width: min(100%, 680px);
+  text-align: center;
+  padding: clamp(24px, 4vw, 48px);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.not-found-page__code {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 10vw, 7rem);
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-primary-600) 75%, var(--color-accent-500));
+}
+
+.not-found-page p {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+
+.not-found-page .btn {
+  margin-inline: auto;
+}

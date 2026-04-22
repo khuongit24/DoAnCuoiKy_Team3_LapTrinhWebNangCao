@@ -1,0 +1,77 @@
+.admin-stats-card {
+  --admin-stats-card-accent: var(--color-primary-600);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: center;
+  min-height: 116px;
+  padding: var(--space-4);
+  border-color: color-mix(in srgb, var(--admin-stats-card-accent) 28%, var(--color-neutral-200));
+  background:
+    radial-gradient(circle at 90% 20%, color-mix(in srgb, var(--admin-stats-card-accent) 14%, white), transparent 45%),
+    linear-gradient(150deg, color-mix(in srgb, var(--admin-stats-card-accent) 8%, white), var(--color-neutral-0));
+  overflow: hidden;
+}
+
+.admin-stats-card::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: var(--admin-stats-card-accent);
+}
+
+.admin-stats-card__icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--admin-stats-card-accent) 14%, white);
+  color: var(--admin-stats-card-accent);
+}
+
+.admin-stats-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.admin-stats-card__content {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.admin-stats-card__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+}
+
+.admin-stats-card__value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 480px) {
+  .admin-stats-card {
+    min-height: 96px;
+    gap: var(--space-3);
+  }
+
+  .admin-stats-card__icon-wrap {
+    width: 42px;
+    height: 42px;
+  }
+
+  .admin-stats-card__value {
+    font-size: var(--font-size-xl);
+  }
+}
