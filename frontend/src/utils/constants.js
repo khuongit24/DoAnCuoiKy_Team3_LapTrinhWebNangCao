@@ -9,11 +9,11 @@ export const CATEGORIES = [
   'Mainboard',
   'PSU',
   'Case',
-  'Cooler',
-  'Monitor',
-  'Keyboard',
-  'Mouse',
-  'Headset',
+  'Tản nhiệt',
+  'Màn hình',
+  'Bàn phím',
+  'Chuột máy tính',
+  'Tai nghe',
 ];
 
 export const ORDER_STATUSES = {
